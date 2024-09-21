@@ -46,8 +46,8 @@ To set up the project, follow these steps:
    - Open **pgAdmin** at `localhost:8000`.
    - Add a new server with the following details:
      - **Name**: Somnia
-     - **Host**: `somnia_db`
-     - **Username**: `somnia`
+     - **Host**: `airdrops_db`
+     - **Username**: `airdrops`
      - **Password**: `password`
 
 ## Running the Application
