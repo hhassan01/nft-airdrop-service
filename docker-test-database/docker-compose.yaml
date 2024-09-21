@@ -1,16 +1,16 @@
 version: "3.8"
 volumes:
-  somnia_pgadmin:
-    name: somnia_pgadmin
+  airdrops_pgadmin:
+    name: airdrops_pgadmin
 services:
-  somnia_db:
+  airdrops_db:
     build:
       dockerfile: db.dockerfile
-    container_name: somnia_db
+    container_name: airdrops_db
     restart: always
     environment:
       POSTGRES_DB: postgres
-      POSTGRES_USER: somnia
+      POSTGRES_USER: airdrops
       POSTGRES_PASSWORD: password
     ports:
     - "5432:5432"
@@ -18,18 +18,18 @@ services:
       - "./migrations-postgresql:/docker-entrypoint-initdb.d/" # Initialization scripts
     extra_hosts:
       - "host.docker.internal:host-gateway" # Enable using host.docker.internal from SAM on linux
-  somnia_pgadmin:
+  airdrops_pgadmin:
     image: dpage/pgadmin4:6.15
     logging:
       driver: none
-    container_name: somnia_pgadmin
+    container_name: airdrops_pgadmin
     restart: always
     depends_on:
-    - somnia_db
+    - airdrops_db
     environment:
       PGADMIN_CONFIG_SERVER_MODE: "False"
       PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
-      PGADMIN_DEFAULT_EMAIL: "admin@somnia.network"
+      PGADMIN_DEFAULT_EMAIL: "admin@airdrops.network"
       PGADMIN_DEFAULT_PASSWORD: "password"
     ports:
     - "8000:80"

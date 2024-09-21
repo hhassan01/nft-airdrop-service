@@ -30,7 +30,7 @@ describe('AuthService', () => {
   it('should verify the signature correctly', () => {
     const message = { contents: 'Enter your MML space here!' };
     const domain: TypedDataDomain = {
-      name: 'Somnia Network',
+      name: 'Airdrops!',
       version: '1',
       chainId: 11155111,
     };
@@ -60,7 +60,7 @@ describe('AuthService', () => {
   it('should fail to verify the signature with an incorrect signature', () => {
     const message = { contents: 'Enter your MML space here!' };
     const domain: TypedDataDomain = {
-      name: 'Somnia Network',
+      name: 'Airdrops!',
       version: '1',
       chainId: 11155111,
     };
@@ -84,7 +84,7 @@ describe('AuthService', () => {
   it('should fail to verify the signature with an incorrect wallet address', () => {
     const message = { contents: 'Enter your MML space here!' };
     const domain: TypedDataDomain = {
-      name: 'Somnia Network',
+      name: 'Airdrops!',
       version: '1',
       chainId: 11155111,
     };

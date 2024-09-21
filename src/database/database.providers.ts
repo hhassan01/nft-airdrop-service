@@ -9,7 +9,7 @@ export const databaseProviders = [
         type: 'postgres',
         host: 'localhost',
         port: 5432,
-        username: 'somnia',
+        username: 'airdrops',
         password: 'password',
         database: 'postgres',
         entities: [User],
