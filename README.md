@@ -45,7 +45,7 @@ To set up the project, follow these steps:
 3. To view the contents of the database:
    - Open **pgAdmin** at `localhost:8000`.
    - Add a new server with the following details:
-     - **Name**: Somnia
+     - **Name**: Nft Airdrops
      - **Host**: `airdrops_db`
      - **Username**: `airdrops`
      - **Password**: `password`
